@@ -14,7 +14,7 @@ class Guess {
   }
 
   feedback() {
-    if (this.response === this.card.answer) {
+    if (this.isCorrect()) {
       return 'Correct!';
     } else {
       return 'Incorrect.';
