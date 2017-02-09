@@ -6,19 +6,11 @@ class Guess {
   }
 
   isCorrect() {
-    if (this.response === this.card.answer) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.response === this.card.answer ? true : false;
   }
 
   feedback() {
-    if (this.isCorrect()) {
-      return 'Correct!';
-    } else {
-      return 'Incorrect.';
-    }
+    return this.isCorrect() ? 'Correct!' : 'Incorrect.'
   }
 }
 

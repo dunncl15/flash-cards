@@ -15,9 +15,7 @@ class Round {
   recordGuess(userGuess) {
     let guess = new Guess({response: userGuess, card: this.currentCard()});
     this.guesses.push(guess);
-    if (guess.feedback() === "Correct!") {
-      this.numberCorrect++
-    }
+    guess.feedback() === 'Correct!' ? this.numberCorrect++ : null
     return guess;
   }
 
